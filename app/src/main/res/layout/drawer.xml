@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:backgroundTint="@color/icons"
+    android:id="@+id/test">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="146dp"
+        android:padding="20dp"
+        android:text="Budget Etudiant"
+        android:textColor="@color/icons"
+        android:textSize="20sp"
+        android:fontFamily="Roboto Medium"
+        android:id="@+id/textView12"
+        android:background="@color/primary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/divider_1"
+
+        android:layout_below="@+id/textView12"
+        android:layout_marginBottom="8dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_payment_black_48dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView2"
+
+            android:footerDividersEnabled="false"
+            android:dividerHeight="0dp"
+            android:layout_below="@+id/divider_1"
+            android:divider="@android:color/transparent"/>
+
+
+
+</RelativeLayout>
