@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -515,7 +516,19 @@ public class MainActivity extends ActionBarActivity /*implements View.OnClickLis
             ImageButton fab_operations = (ImageButton) rootView.findViewById(R.id.fab_addoperations);
             fab_operations.setOnClickListener(new View.OnClickListener(){
                                                   @Override public void onClick(View v){
-                                                      Calendar c = Calendar.getInstance();
+
+                                                      new AlertDialog.Builder(getActivity())
+                                                              .setTitle("Title")
+                                                              .setMessage("Do you really want to whatever?")
+                                                              .setIcon(android.R.drawable.ic_dialog_alert)
+                                                              .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                                                                  public void onClick(DialogInterface dialog, int whichButton) {
+                                                                      Toast.makeText(MainActivity.this, "Yaay", Toast.LENGTH_SHORT).show();
+                                                                  }})
+                                                              .setNegativeButton(android.R.string.no, null).show();
+
+                                                    /*  Calendar c = Calendar.getInstance();
                                                       int mYear = c.get(Calendar.YEAR);
                                                       int mMonth = c.get(Calendar.MONTH);
                                                       int mDay = c.get(Calendar.DAY_OF_MONTH);
